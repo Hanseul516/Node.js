@@ -17,3 +17,6 @@ console.log(sum_result);
 const mul = require("./mul");
 const mul_result = mul(1, 2);
 console.log(mul_result);
+
+//node.js 기본모듈
+const 
