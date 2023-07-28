@@ -6,10 +6,12 @@ app.listen(port, function () {
   console.log(`Server Start =============>${port}`);
 });
 
+//http://localhost:3000
 app.get("/", function(req, res) {
-  res.sendFile(__dirname + "./pages/index.html");
+  res.sendFile(__dirname + "/pages/index.html");
 });
 
+//http://localhost:3000/about
 app.get("/about", function(req, res) {
-  res.sendFile(__dirname + "./pages/about.html");
+  res.sendFile(__dirname + "/pages/about.html");
 });
