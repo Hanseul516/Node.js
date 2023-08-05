@@ -13,9 +13,9 @@ const server = http.createServer((req, res) => {
   let path;
 
   if (req.url === "/" || req.url === "index.html") {
-    res.statusCode = 200; //응답 상태 코드를 200으로 설정합니다. 200은 성공을 의미
+    res.statusCode = 200; //응답 상태 코드를 200으로 설정. 200은 성공을 의미
     res.setHeader("Content-Type", "text/html");
-    //응답 헤더의 "Content-Type"을 "text/html"로 설정합니다. 이는 응답으로 HTML 데이터를 보낸다는 것을 의미
+    //응답 헤더의 "Content-Type"을 "text/html"로 설정. 이는 응답으로 HTML 데이터를 보낸다는 것을 의미
     path = path.join(__dirname, "views", "index.html");
     fstat.readFile(path, "utf8", (err, data) => {
       res.end(data);
@@ -24,4 +24,4 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-//server.listen()을 사용하여 서버를 지정된 포트로 바인딩
+//server.listen()을 사용해 서버를 지정된 포트로 바인딩
