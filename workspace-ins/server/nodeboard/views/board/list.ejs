@@ -8,7 +8,7 @@
 <body>
 	<header>
 		<div class="container">
-			<h1>게시판</h1>
+			<h1><%=title%></h1>
 		</div>
 	</header>
 	<div class="container">
@@ -32,20 +32,17 @@
 						</tr>
 					</thead>
 					<tbody>
+
+          <% list.forEach(function(article, i){ %>
 						<tr class="active">
-							<td>2</td>
-							<td><a href="/board/2">Node.js 가이드</a></td>
-							<td>이영희</td>
-							<td>30</td>
-							<td>2099-07-27 21:33</td>
+							<td><%=article.no%></td>
+							<td><a href="/board/<%=article.no%>"><%=article.title%></a></td>
+							<td><%=article.writer%></td>
+							<td><%=article.view%></td>
+							<td><%=article.regdate%></td>
 						</tr>
-						<tr class="active">
-							<td>1</td>
-							<td><a href="/board/1">React 가이드</a></td>
-							<td>김철수</td>
-							<td>123</td>
-							<td>2099-07-20 11:25</td>
-						</tr>
+          <% }); %>
+
 					</tbody>
 				</table>
 			</div>

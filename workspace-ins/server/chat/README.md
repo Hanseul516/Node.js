@@ -18,6 +18,16 @@
 * connect 미들웨어 컨테이너 사용
 * middleware를 connect에 등록
 ### step5/
+* routes/index.js: 동적인 자원 응답
+* views: view를 구성
 
 ### step6/
-
+* connect용 middleware 사용(morgan, serve-static)
+* middleware 제거
+* expres-session: 로그인 상태 정보 유지 session 처리
+* ejs: view engine
+* nochche: 캐시 무효화
+* socket.io: 웹소켓 채팅 기능 구현
+```
+npm i morgan serve-static express-session nocache ejs socket.io
+```

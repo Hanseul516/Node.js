@@ -12,9 +12,9 @@ const lee = m3({ kor: 56, eng: 87 });
 console.log(kim.sum(), kim.avg());
 console.log(lee.sum(), lee.avg());
 
-// const logger = require('./m5')();
+const logger = require('./m5')();
 // const logger = require('./m5')({ target: 'file', filename: 'output.log' });
-const logger = require('./m5')({ target: 'file' });
+// const logger = require('./m5')({ target: 'file' });
 
 logger.log('작업 시작.');
 logger.error('에러 발생...');

@@ -3,10 +3,10 @@ console.log('범용성이 필요한 확장 모듈에서 많이 사용하는 expo
 const os = require('node:os');
 const fs = require('node:fs');
 
-function logger(options){
+function logger({ target, filename='logger.log' }={}){
   let logfile;
-  if(options && options.target === 'file'){
-    logfile = fs.createWriteStream(options.filename || 'logger.log', { flags: 'a' });
+  if(target === 'file'){
+    logfile = fs.createWriteStream(filename, { flags: 'a' });
   }
   return {
     log: function(msg){
